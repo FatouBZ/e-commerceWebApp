@@ -1,28 +1,34 @@
-import { useFormik } from "formik";
-import React from "react";
-import * as Yup from "yup";
+import { useFormik } from 'formik'
+import React from 'react'
+import * as Yup from 'yup'
 
 const initialValues = {
-  email: "",
-  password: "",
-};
+  email: '',
+  password: '',
+}
 
 function Login() {
   const loginSchema = Yup.object().shape({
     email: Yup.string()
-      .email("Invalid email address")
-      .required("Please enter email address"),
-    password: Yup.string().required("Please enter password"),
-  });
+      .email('Invalid email address')
+      .required('Please enter email address'),
+    password: Yup.string().required('Please enter password'),
+  })
 
-  const { values, handleSubmit, handleBlur, handleChange, errors, touched } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: loginSchema,
-      onSubmit: (values) => {
-        console.log(values);
-      },
-    });
+  const {
+    values,
+    handleSubmit,
+    handleBlur,
+    handleChange,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: loginSchema,
+    onSubmit: (values) => {
+      console.log(values)
+    },
+  })
   return (
     <form onSubmit={handleSubmit}>
       <div className="h-screen flex justify-center items-center">
@@ -82,7 +88,7 @@ function Login() {
         </div>
       </div>
     </form>
-  );
+  )
 }
 
-export default Login;
+export default Login
