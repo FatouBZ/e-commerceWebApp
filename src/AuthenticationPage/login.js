@@ -1,35 +1,41 @@
-import { useFormik } from "formik";
-import React from "react";
-import * as Yup from "yup";
+import { useFormik } from 'formik'
+import React from 'react'
+import * as Yup from 'yup'
 
 const initialValues = {
-  email: "",
-  password: "",
-};
+  email: '',
+  password: '',
+}
 
 function Login() {
   const loginSchema = Yup.object().shape({
     email: Yup.string()
-      .email("Invalid email address")
-      .required("Please enter email address"),
-    password: Yup.string().required("Please enter password"),
-  });
+      .email('Invalid email address')
+      .required('Please enter email address'),
+    password: Yup.string().required('Please enter password'),
+  })
 
-  const { values, handleSubmit, handleBlur, handleChange, errors, touched } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: loginSchema,
-      onSubmit: (values) => {
-        console.log(values);
-      },
-    });
+  const {
+    values,
+    handleSubmit,
+    handleBlur,
+    handleChange,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: loginSchema,
+    onSubmit: (values) => {
+      console.log(values)
+    },
+  })
   return (
     <form onSubmit={handleSubmit}>
       <div className="h-screen flex justify-center items-center">
         <div className="w-[30%]">
           <div className="flex justify-center items-center">
             <div className="p-4 rounded-md border-2 bg-white w-full">
-              <h3 className="p-2 m-2 text-center text-[#186049] text-4xl">
+              <h3 className="p-2 m-2 text-center text-[#247158] text-4xl">
                 Login here
               </h3>
               <input
@@ -57,7 +63,7 @@ function Login() {
                 <small className="text-red-500">{errors.password}</small>
               ) : null}
               <button
-                className="w-full p-2 text-white rounded-md bg-[#186049]"
+                className="w-full p-2 text-white rounded-md bg-[#247158]"
                 type="submit"
               >
                 Login
@@ -67,7 +73,7 @@ function Login() {
         </div>
       </div>
     </form>
-  );
+  )
 }
 
-export default Login;
+export default Login
