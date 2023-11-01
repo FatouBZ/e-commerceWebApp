@@ -1,38 +1,38 @@
-import React from 'react'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 function Register() {
   return (
     <Formik
       initialValues={{
-        firstname: '',
-        surname: '',
-        phonenumber: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
+        firstname: "",
+        surname: "",
+        phonenumber: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
       }}
       validationSchema={Yup.object({
         email: Yup.string()
-          .email('Invalid email address')
-          .required('Please enter email'),
-        password: Yup.string().required('Please enter password'),
-        firstname: Yup.string().required('Please enter first name'),
-        surname: Yup.string().required('Please enter last name'),
-        confirmPassword: Yup.string().required('please confirm password'),
-        phonenumber: Yup.string().required('Please enter phone number'),
+          .email("Invalid email address")
+          .required("Please enter email"),
+        password: Yup.string().required("Please enter password"),
+        firstname: Yup.string().required("Please enter first name"),
+        surname: Yup.string().required("Please enter last name"),
+        confirmPassword: Yup.string().required("please confirm password"),
+        phonenumber: Yup.string().required("Please enter phone number"),
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-          setSubmitting(false)
-        }, 400)
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
       }}
     >
       <Form>
         <div className="flex justify-center items-center h-screen bg-[#247158] ">
-          <div className="flex flex-row bg-white w-[70%]">
+          <div className="flex flex-row bg-white w-[65%] rounded-lg p-1">
             <div className="w-[50%]">
               <img
                 className="w-[100%] "
@@ -41,8 +41,8 @@ function Register() {
               />
             </div>
 
-            <div className="flex flex-col w-[50%] p-5 justify-center ">
-              <h1 className="  text-lg text-3xl font-bold text-[#247158] text-center mb-5">
+            <div className="flex flex-col w-[50%] p-5 justify-center">
+              <h1 className="text-4xl font-bold text-[#247158] text-center mb-5">
                 Create Account
               </h1>
               <div className=" flex flex-col text-left">
@@ -143,7 +143,7 @@ function Register() {
         </div>
       </Form>
     </Formik>
-  )
+  );
 }
 
-export default Register
+export default Register;
