@@ -62,8 +62,8 @@ function Products() {
               className="rounded-lg w-[100%]"
             />
           </div>
-          <div className="flex flex-col text-left p-2">
-            <p>Product Name</p>
+          <div className="flex flex-col text-left p-2 ">
+            <p className="font-bold">Product Name</p>
             <div className="flex">
               <p className="text-[#247158] font-bold text-lg mr-20 ">$20</p>
               <p>Rating</p>

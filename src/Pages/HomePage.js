@@ -1,6 +1,7 @@
 import React from 'react'
 import Products from './HomePageContent/Products'
 import MenuItem from './HomePageContent/MenuItem'
+import Cart from './HomePageContent/Cart'
 
 function HomePage() {
   return (
@@ -11,8 +12,8 @@ function HomePage() {
       <div className="flex flex-col h-screen  w-[75%] px-10 py-5 ">
         <Products />
       </div>
-      <div className="flex fle-col h-screen  w-[20%]  bg-[#247158]">
-        bill content
+      <div className="flex fle-col w-[20%] p-5 bg-[#247158] ">
+        <Cart />
       </div>
     </div>
   )
