@@ -54,7 +54,7 @@ function Products() {
         <h1>Category chosen name</h1>
       </div>
       <div className="flex flex-wrap justify-around ">
-        <div className=" flex flex-col bg-[#fff] rounded-lg w-60 h-60 mt-5 text-center ">
+        <div className=" flex flex-col bg-[#fff] rounded-lg w-60  mt-5 text-center ">
           <div className="p-2 max-w-20 max-h-50">
             <img
               src="./asset/1.jpg"
@@ -62,10 +62,17 @@ function Products() {
               className="rounded-lg w-[100%]"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left p-2">
             <p>Product Name</p>
-            <p>Rating</p>
-            <p>Product Brand</p>
+            <div className="flex">
+              <p className="text-[#247158] font-bold text-lg mr-20 ">$20</p>
+              <p>Rating</p>
+            </div>
+          </div>
+          <div className="w-full p-2">
+            <button className=" w-full bg-[#247158] p-1 mb-2 text-[#fff] font-bold rounded-lg">
+              add to Cart
+            </button>
           </div>
         </div>
       </div>
