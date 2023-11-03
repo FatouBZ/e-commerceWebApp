@@ -1,18 +1,20 @@
 import React from 'react'
-import Products from './HomePageContent/Products'
 import MenuItem from './HomePageContent/MenuItem'
 import Cart from './HomePageContent/Cart'
+import Search from '../components/Search'
+import ProductsDetails from './HomePageContent/ProductsDetails'
 
 function HomePage() {
   return (
     <div className=" flex flex-row h-screen bg-[#E5DAC4]">
-      <div className="flex flex-col h-screen items-center px-10 py-5 w-[5%] bg-[#247158]">
+      <div className="flex flex-col items-center px-5 py-2 w-[5%] bg-[#247158]">
         <MenuItem />
       </div>
-      <div className="flex flex-col h-screen  w-[75%] px-10 py-5 ">
-        <Products />
+      <div className="flex flex-col h-screen overflow-scroll  w-[75%] p-5 ">
+        <Search />
+        <ProductsDetails />
       </div>
-      <div className="flex fle-col w-[20%] p-5 bg-[#247158] ">
+      <div className="flex flex-col w-[20%] p-2 bg-[#247158] ">
         <Cart />
       </div>
     </div>
