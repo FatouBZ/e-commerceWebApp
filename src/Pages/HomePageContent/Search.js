@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaSearch } from 'react-icons/fa'
+import React from "react";
+import { FaSearch } from "react-icons/fa";
 
 function Search() {
   return (
@@ -15,7 +15,7 @@ function Search() {
               placeholder="Search menu"
             />
             <button className="mr-5">
-              <FaSearch className="text-[#247158] text-2xl" />
+              <FaSearch className="text-[#247158]" />
             </button>
           </div>
         </form>
@@ -30,7 +30,7 @@ function Search() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Search
+export default Search;
