@@ -13,7 +13,7 @@ function HomePage() {
       </div>
       <div className="flex flex-col h-screen bg-[#E5DAC4] rounded m-3 w-[75%] p-5 gap-4 max-h-[97%]">
         <Search />
-        <ProductsDetails />
+        <Products />
       </div>
       <div className="flex flex-col w-[20%] p-5 bg-[#247158] ">
         <Cart />
