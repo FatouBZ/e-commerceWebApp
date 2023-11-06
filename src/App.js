@@ -1,7 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './AuthenticationPage/login'
-import Register from './AuthenticationPage/Register'
-import HomePage from './Pages/HomePage'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./AuthenticationPage/login";
+import Register from "./AuthenticationPage/Register";
+import HomePage from "./Pages/HomePage";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

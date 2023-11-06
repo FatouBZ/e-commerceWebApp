@@ -25,9 +25,5 @@ function MenuItem() {
         <button className=" flex justify-center hover:bg-[rgb(106,178,155)] mb-2  focus:bg-[#6AB29B] py-3 px-2 rounded  ">
           <IoLogOutOutline className="text-white text-3xl" />
         </button>
-      </div>
-    </div>
-  )
-}
 
-export default MenuItem
+export default MenuItem;
