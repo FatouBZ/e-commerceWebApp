@@ -1,8 +1,8 @@
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
+import { BiHide, BiShow } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 import * as Yup from 'yup'
-import { BiShow, BiHide } from 'react-icons/bi'
 
 const initialValues = {
   email: '',
@@ -98,14 +98,6 @@ function Login() {
                   >
                     Login
                   </button>
-
-                  <p className="text-gray-500">Forgot Password?</p>
-                  <p className="text-gray-500">
-                    New here?{' '}
-                    <Link to={'/register'} className="text-[#2e8b36]">
-                      Create Account
-                    </Link>
-                  </p>
 
                   <p className="text-gray-500">Forgot Password?</p>
                   <p className="text-gray-500">
