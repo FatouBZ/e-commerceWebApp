@@ -1,17 +1,17 @@
-import React from 'react'
-import { BsCashCoin, BsCreditCard, BsThreeDots } from 'react-icons/bs'
-import { BiQrScan } from 'react-icons/bi'
-import { AiFillPlusSquare, AiFillMinusSquare } from 'react-icons/ai'
+import React from "react";
+import { BsCashCoin, BsCreditCard, BsThreeDotsVertical } from "react-icons/bs";
+import { BiQrScan } from "react-icons/bi";
+import { AiFillPlusSquare, AiFillMinusSquare } from "react-icons/ai";
 
 function Cart() {
   return (
     <>
       <div className="flex text-[#fff] font-bold  justify-between mb-5">
-        <p className="text-3xl">Cart</p>
-        <BsThreeDots className="text-white text-2xl " />
+        <p className="text-lg">Cart</p>
+        <BsThreeDotsVertical className="text-white text-lg " />
       </div>
 
-      <div className=" flex bg-[#fff]  rounded-lg text-center mb-44">
+      <div className=" flex bg-[#fff]  rounded-lg text-center mb-2">
         <div className="p-2 max-w-[35%]">
           <img
             src="./asset/1.jpg"
@@ -28,7 +28,7 @@ function Cart() {
             <div className="flex flex-col items-center  text-[#aab3b0] font-bold">
               <AiFillMinusSquare />
             </div>
-            <p className="flex flex-col items-center mb-1 mx-2 text-[#247158] font-bold">
+            <p className="flex flex-col items-center mb-1 mx-2 text-[#247158]">
               1
             </p>
             <div className="flex flex-col items-center   text-[#247158] font-bold">
@@ -37,34 +37,31 @@ function Cart() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col bg-[#fff]  rounded-lg text-center  p-2">
+      <div className=" flex flex-col bg-[#fff]  rounded-lg text-center p-5">
         <div className="flex justify-between text-[#247158]  mb-2">
-          <p className="font-bold ">SubTotal</p>
+          <p className="">SubTotal</p>
           <p>$200</p>
         </div>
         <div className="flex justify-between text-[#247158]  mb-2">
-          <p className="font-bold ">Discount</p>
+          <p className="">Discount</p>
           <p>$5</p>
         </div>
         <div className="flex justify-between text-[#247158]  mb-2">
-          <p className="font-bold ">Tax</p>
+          <p className="">Tax</p>
           <p>$200</p>
         </div>
         <div className="flex justify-between text-[#247158]  mb-2">
           <p className="font-bold ">SubTotal</p>
           <p>$1.90</p>
         </div>
-        <div className="flex justify-between text-[#247158]  mb-2">
-          <p>-----------------------------------</p>
-        </div>
+        <hr></hr>
         <div className="flex justify-between text-[#247158] font-bold text-lg ">
           <p>Total</p>
           <p>$200</p>
         </div>
       </div>
-
-      <div className="mb-4  mt-24">
-        <p className="text-2xl font-bold text-white mb-5">Payment Method</p>
+      <div className="p-5 outline outline-white outline-1 mt-2 rounded-md">
+        <p className="text-lg text-white">Payment Method</p>
         <div className="flex  justify-around items-center">
           <button className=" flex flex-col justify-center items-center hover:text-white hover:border  hover:bg-[#6AB29B] focus:border  focus:bg-[#6AB29B] w-20 h-16  rounded">
             <BsCashCoin className="text-[#fff] mb-1" />
@@ -72,14 +69,12 @@ function Cart() {
               Cash
             </small>
           </button>
-
           <button className=" flex flex-col justify-center items-center hover:text-white hover:border  hover:bg-[#6AB29B] focus:border  focus:bg-[#6AB29B] w-20 h-16  rounded">
             <BsCreditCard className="text-[#fff]  mb-1" />
             <small style={{ fontSize: 10 }} className=" text-[#fff] px-1 ">
               Debit Card
             </small>
           </button>
-
           <button className=" flex flex-col justify-center items-center hover:text-white hover:border  hover:bg-[#6AB29B] focus:border  focus:bg-[#6AB29B] w-20 h-16  rounded">
             <BiQrScan className="text-[#fff]  mb-1" />
             <small style={{ fontSize: 10 }} className="text-[#fff] ">
@@ -88,13 +83,13 @@ function Cart() {
           </button>
         </div>
       </div>
-      <div className="w-full  mt-8">
+      <div className="w-full">
         <button className=" w-full bg-[#fff] p-1 mb-2 text-[#247158] font-bold rounded-lg">
           Add to Billing
         </button>
       </div>
     </>
-  )
+  );
 }
 
-export default Cart
+export default Cart;

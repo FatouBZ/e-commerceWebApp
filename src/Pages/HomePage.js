@@ -11,11 +11,11 @@ function HomePage() {
       <div className="flex flex-col items-center px-5 py-2 w-[5%] bg-[#247158]">
         <MenuItem />
       </div>
-      <div className="flex flex-col h-screen overflow-scroll  w-[75%] p-5 ">
+      <div className="flex flex-col h-screen overflow-scroll  w-[75%] p-5 gap-4">
         <Search />
         <Products />
       </div>
-      <div className="flex flex-col w-[20%] p-2 bg-[#247158] ">
+      <div className="flex flex-col w-[20%] p-5 bg-[#247158] ">
         <Cart />
       </div>
     </div>
