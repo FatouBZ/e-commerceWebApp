@@ -1,34 +1,29 @@
-import { useFormik } from 'formik'
-import React from 'react'
-import * as Yup from 'yup'
+import { useFormik } from "formik";
+import React from "react";
+import { Link } from "react-router-dom";
+import * as Yup from "yup";
 
 const initialValues = {
-  email: '',
-  password: '',
-}
+  email: "",
+  password: "",
+};
 
 function Login() {
   const loginSchema = Yup.object().shape({
     email: Yup.string()
-      .email('Invalid email address')
-      .required('Please enter email address'),
-    password: Yup.string().required('Please enter password'),
-  })
+      .email("Invalid email address")
+      .required("Please enter email address"),
+    password: Yup.string().required("Please enter password"),
+  });
 
-  const {
-    values,
-    handleSubmit,
-    handleBlur,
-    handleChange,
-    errors,
-    touched,
-  } = useFormik({
-    initialValues: initialValues,
-    validationSchema: loginSchema,
-    onSubmit: (values) => {
-      console.log(values)
-    },
-  })
+  const { values, handleSubmit, handleBlur, handleChange, errors, touched } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: loginSchema,
+      onSubmit: (values) => {
+        console.log(values);
+      },
+    });
   return (
     <form onSubmit={handleSubmit}>
       <div className="h-screen flex justify-center items-center">
@@ -77,10 +72,14 @@ function Login() {
                   >
                     Login
                   </button>
-                  <div className="p-5 bg-gray-100 rounded-md mt-3">
-                    <p>Forgot Password?</p>
-                    <p className="">New here? Create Account</p>
-                  </div>
+
+                  <p className="text-gray-500">Forgot Password?</p>
+                  <p className="text-gray-500">
+                    New here?{" "}
+                    <Link to={"/register"} className="text-[#2e8b36]">
+                      Create Account
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>
@@ -88,7 +87,7 @@ function Login() {
         </div>
       </div>
     </form>
-  )
+  );
 }
 
-export default Login
+export default Login;
