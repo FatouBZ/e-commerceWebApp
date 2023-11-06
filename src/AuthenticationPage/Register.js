@@ -1,54 +1,59 @@
-import React from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import React from 'react'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const initialValues = {
-  firstname: "",
-  lastname: "",
-  phone: "",
-  email: "",
-  password: "",
-  cpassword: "",
-};
-
+  firstname: '',
+  lastname: '',
+  phone: '',
+  email: '',
+  password: '',
+  cpassword: '',
+}
 function Register() {
   const registerSchema = Yup.object({
     email: Yup.string()
-      .email("Invalid email address")
-      .required("Please enter email address"),
-    firstname: Yup.string().required("Please enter first name"),
-    lastname: Yup.string().required("Last name cannot be left blank"),
-    password: Yup.string().required("Please enter password"),
-    cpassword: Yup.string().required("passwords do not match"),
-    phone: Yup.string().required("Please enter phone number"),
-  });
+      .email('Invalid email address')
+      .required('Please enter email address'),
+    firstname: Yup.string().required('Please enter first name'),
+    lastname: Yup.string().required('Last name cannot be left blank'),
+    password: Yup.string().required('Please enter password'),
+    cpassword: Yup.string().required('passwords do not match'),
+    phone: Yup.string().required('Please enter phone number'),
+  })
 
-  const { values, handleSubmit, handleBlur, handleChange, errors, touched } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: registerSchema,
-      onSubmit: async (values) => {
-        try {
-          const response = await axios.post(
-            "http://localhost/eCommerce/register",
-            values,
-            {
-              headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
-              },
-              withCredentials: true,
-            }
-          );
+  const {
+    values,
+    handleSubmit,
+    handleBlur,
+    handleChange,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: registerSchema,
+    onSubmit: async (values) => {
+      try {
+        const response = await axios.post(
+          'http://localhost/eCommerce/register',
+          values,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+            },
+            withCredentials: true,
+          },
+        )
 
-          console.log("API request successful:", response.data);
-        } catch (error) {
-          console.error("API request failed:", error.message);
-        }
-      },
-    });
+        console.log('API request successful:', response.data)
+      } catch (error) {
+        console.error('API request failed:', error.message)
+      }
+    },
+  })
 
   return (
     <form onSubmit={handleSubmit}>
@@ -158,8 +163,8 @@ function Register() {
                 Register
               </button>
               <p className="text-gray-500  mt-2 ">
-                Already have an account?{" "}
-                <Link to={"/login"} className="text-[#2e8b36]">
+                Already have an account?{' '}
+                <Link to={'/login'} className="text-[#2e8b36]">
                   Login here
                 </Link>
               </p>
@@ -168,7 +173,7 @@ function Register() {
         </div>
       </div>
     </form>
-  );
+  )
 }
 
-export default Register;
+export default Register
