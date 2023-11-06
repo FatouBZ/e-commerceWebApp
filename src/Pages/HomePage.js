@@ -1,8 +1,7 @@
 import React from 'react'
 import MenuItem from './HomePageContent/MenuItem'
 import Cart from './HomePageContent/Cart'
-import Search from './HomePageContent/Search'
-import Products from './HomePageContent/Products'
+import Search from '../components/Search'
 import ProductsDetails from './HomePageContent/ProductsDetails'
 
 function HomePage() {
@@ -13,7 +12,7 @@ function HomePage() {
       </div>
       <div className="flex flex-col h-screen overflow-x-hidden overflow-y-auto bg-[#E5DAC4] rounded m-3  w-[75%] p-5 gap-4 max-h-[97%]">
         <Search />
-        <Products />
+        <ProductsDetails />
       </div>
       <div className="flex flex-col w-[20%] p-5 bg-[#247158] ">
         <Cart />
