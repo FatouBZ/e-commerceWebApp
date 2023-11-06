@@ -1,10 +1,10 @@
-import React from 'react'
-import { FaSearch } from 'react-icons/fa'
+import React from "react";
+import { FaSearch } from "react-icons/fa";
 
 function Search() {
   return (
     <>
-      <div className="flex justify-between ">
+      <div className="flex justify-between">
         <form className=" w-[80%] ">
           <div className=" flex justify-between items-center w-full bg-[#fff] rounded-full outline outline-1 outline-gray-200">
             <input
@@ -30,7 +30,7 @@ function Search() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Search
+export default Search;

@@ -6,8 +6,8 @@ import { AiFillPlusSquare, AiFillMinusSquare } from "react-icons/ai";
 function Cart() {
   return (
     <>
-      <div className="flex text-[#fff] font-bold  justify-between mb-5">
-        <p className="text-lg">Cart</p>
+      <div className="flex text-[#fff]  justify-between mb-5">
+        <p className="text-lg">Items in your cart</p>
         <BsThreeDotsVertical className="text-white text-lg " />
       </div>
 
@@ -60,9 +60,9 @@ function Cart() {
           <p>$200</p>
         </div>
       </div>
-      <div className="p-5 outline outline-white outline-1 mt-2 rounded-md">
+      <div className="p-2 outline outline-white outline-1 my-2 rounded-md">
         <p className="text-lg text-white">Payment Method</p>
-        <div className="flex  justify-around items-center">
+        <div className="flex  justify-around items-center p-2">
           <button className=" flex flex-col justify-center items-center hover:text-white hover:border  hover:bg-[#6AB29B] focus:border  focus:bg-[#6AB29B] w-20 h-16  rounded">
             <BsCashCoin className="text-[#fff] mb-1" />
             <small style={{ fontSize: 10 }} className=" text-[#fff]">
@@ -84,7 +84,7 @@ function Cart() {
         </div>
       </div>
       <div className="w-full">
-        <button className=" w-full bg-[#fff] p-1 mb-2 text-[#247158] font-bold rounded-lg">
+        <button className="outline w-full bg-[#fff] p-1 text-[#247158] rounded-lg hover:bg-transparent hover:text-white hover:outline-1 hover:outline-white">
           Add to Billing
         </button>
       </div>

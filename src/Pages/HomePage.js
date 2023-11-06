@@ -6,11 +6,11 @@ import Products from "./HomePageContent/Products";
 
 function HomePage() {
   return (
-    <div className=" flex flex-row h-screen bg-[#E5DAC4]">
+    <div className=" flex flex-row h-screen bg-[#247158]">
       <div className="flex flex-col items-center px-5 py-2 w-[5%] bg-[#247158]">
         <MenuItem />
       </div>
-      <div className="flex flex-col h-screen overflow-scroll  w-[75%] p-5 gap-4">
+      <div className="flex flex-col h-screen overflow-x-hidden overflow-y-scroll bg-[#E5DAC4] rounded m-3  w-[75%] p-5 gap-4">
         <Search />
         <Products />
       </div>

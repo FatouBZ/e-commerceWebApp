@@ -18,7 +18,7 @@ function Products() {
         <div className=" text-2xl text-[#247158] mb-3">
           <h1>Category chosen name</h1>
         </div>
-        <div className="flex flex-wrap justify-start ">
+        <div className="flex flex-wrap justify-start gap-3">
           <ProductCard />
         </div>
       </div>
