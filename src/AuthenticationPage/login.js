@@ -106,6 +106,14 @@ function Login() {
                       Create Account
                     </Link>
                   </p>
+
+                  <p className="text-gray-500">Forgot Password?</p>
+                  <p className="text-gray-500">
+                    New here?{' '}
+                    <Link to={'/register'} className="text-[#2e8b36]">
+                      Create Account
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>
