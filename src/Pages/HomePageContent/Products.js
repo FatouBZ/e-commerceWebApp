@@ -15,26 +15,11 @@ function Products() {
           <CategoryCard />
         </div>
       </div>
-      <div className="bg-white p-2 shadow-sm rounded-md overflow-x-hidden scrollbar-hide overflow-y-auto ">
+      <div className="bg-white py-3 shadow-sm rounded-md overflow-x-hidden scrollbar-hide overflow-y-auto ">
         <div className=" text-lg text-[#247158] mb-3 px-5">
           <h1>Category chosen name</h1>
         </div>
-        <div className="flex flex-wrap gap-3  justify-center">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+        <div className="flex flex-wrap gap-3 px-5 justify-between">
           <ProductCard />
         </div>
       </div>
