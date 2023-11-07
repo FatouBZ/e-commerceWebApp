@@ -15,7 +15,7 @@ function Products() {
         </div>
       </div>
       <div className="bg-white p-2 shadow-sm rounded-md">
-        <div className=" text-2xl text-[#247158] mb-3">
+        <div className=" text-lg text-[#247158] mb-3">
           <h1>Category chosen name</h1>
         </div>
         <div className="flex flex-wrap justify-start gap-3">
