@@ -10,7 +10,7 @@ function MenuItem() {
       <div>
         <Link to={"/"}>
           <div>
-            <BiLogoBootstrap className="text-white text-6xl" />
+            <BiLogoBootstrap className="text-white text-6xl " />
           </div>
         </Link>
         <div className="mt-3 flex flex-col justify-center ">
