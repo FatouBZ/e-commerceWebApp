@@ -8,7 +8,7 @@ function Cart() {
     <>
       <div className="flex text-[#fff]  justify-between mb-5">
         <p className="text-lg">Items in your cart</p>
-        <BsThreeDotsVertical className="text-white text-lg " />
+        <BsThreeDotsVertical className="text-white text-lg mt-2" />
       </div>
 
       <div className=" flex bg-[#fff]  rounded-lg text-center mb-2">
