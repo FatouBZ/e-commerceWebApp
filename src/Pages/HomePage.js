@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import MenuItem from './HomePageContent/MenuItem'
 import Cart from './HomePageContent/Cart'
 import Search from './HomePageContent/Search'
 import Products from './HomePageContent/Products'
 import ProductsDetails from './HomePageContent/ProductsDetails'
-=======
-import React from "react";
-import MenuItem from "./HomePageContent/MenuItem";
-import Cart from "./HomePageContent/Cart";
-import Search from "../components/Search";
-import Products from "./HomePageContent/Products";
->>>>>>> 91fdb99 (configured routes)
 
 function HomePage() {
   return (
@@ -27,7 +19,7 @@ function HomePage() {
         <Cart />
       </div>
     </div>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage
