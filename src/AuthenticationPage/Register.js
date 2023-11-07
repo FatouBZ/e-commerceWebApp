@@ -68,7 +68,7 @@ function Register() {
                 type="text"
                 placeholder="enter last name"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="firstname"
+                name="lastname"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.lastname}
@@ -82,7 +82,7 @@ function Register() {
                 type="email"
                 placeholder="enter email"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="firstname"
+                name="email"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.email}
@@ -93,7 +93,7 @@ function Register() {
             </div>
             <div className=" flex flex-col text-left">
               <input
-                type="text"
+                type="password"
                 placeholder="enter password"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
                 name="password"
