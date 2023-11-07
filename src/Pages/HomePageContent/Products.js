@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Products() {
   return (
     <>
-      <div className="bg-white p-2 shadow-sm rounded-md">
+      <div className="bg-white p-2 shadow-sm rounded-md gap-3">
         <div className="text-lg text-[#247158] mb-3">
           <h1>Categories</h1>
           <hr></hr>
@@ -15,15 +15,28 @@ function Products() {
           <CategoryCard />
         </div>
       </div>
-      <div className="bg-white p-2 shadow-sm rounded-md">
-        <div className=" text-lg text-[#247158] mb-3">
+      <div className="bg-white p-2 shadow-sm rounded-md overflow-x-hidden scrollbar-hide overflow-y-auto ">
+        <div className=" text-lg text-[#247158] mb-3 px-5">
           <h1>Category chosen name</h1>
         </div>
-        <Link to="/product-details">
-          <div className="flex flex-wrap justify-start gap-3">
-            <ProductCard />
-          </div>
-        </Link>
+        <div className="flex flex-wrap gap-3  justify-center">
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
       </div>
     </>
   )
