@@ -3,6 +3,7 @@ import MenuItem from './HomePageContent/MenuItem'
 import Cart from './HomePageContent/Cart'
 import Search from '../components/Search'
 import ProductsDetails from './HomePageContent/ProductsDetails'
+import Products from './HomePageContent/Products'
 
 function HomePage() {
   return (
@@ -12,7 +13,7 @@ function HomePage() {
       </div>
       <div className="flex flex-col h-screen overflow-scroll  w-[75%] p-5 ">
         <Search />
-        <ProductsDetails />
+        <Products />
       </div>
       <div className="flex flex-col w-[20%] p-2 bg-[#247158] ">
         <Cart />
