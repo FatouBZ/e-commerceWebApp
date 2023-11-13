@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import { React, useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
-import { BiHide, BiShow } from 'react-icons/bi'
+import { BiShow, BiHide } from 'react-icons/bi'
 
 const initialValues = {
   firstname: '',
@@ -48,24 +47,8 @@ function Register() {
   } = useFormik({
     initialValues: initialValues,
     validationSchema: registerSchema,
-    onSubmit: async (values) => {
-      try {
-        const response = await axios.post(
-          'http://localhost/eCommerce/register',
-          values,
-          {
-            headers: {
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*',
-            },
-            withCredentials: true,
-          },
-        )
-
-        console.log('API request successful:', response.data)
-      } catch (error) {
-        console.error('API request failed:', error.message)
-      }
+    onSubmit: (values) => {
+      console.log(values)
     },
   })
 
