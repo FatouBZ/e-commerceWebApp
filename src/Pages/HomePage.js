@@ -2,8 +2,8 @@ import React from 'react'
 import MenuItem from './HomePageContent/MenuItem'
 import Cart from './HomePageContent/Cart'
 import Search from './HomePageContent/Search'
-import ProductsDetails from './HomePageContent/ProductsDetails'
 import Products from './HomePageContent/Products'
+import ProductsDetails from './HomePageContent/ProductsDetails'
 
 function HomePage() {
   return (
