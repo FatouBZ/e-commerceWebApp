@@ -2,6 +2,7 @@ import React from 'react'
 import CategoryCard from './categoryCard'
 import ProductCard from '../../components/productCard'
 import OrdersTable from '../HomePageContent/Store/orders'
+import { Link } from 'react-router-dom'
 
 function Products() {
   return (
@@ -23,6 +24,11 @@ function Products() {
           <OrdersTable />
           <ProductCard />
         </div>
+        <Link to="/product-details">
+          <div className="flex flex-wrap justify-start gap-3">
+            <ProductCard />
+          </div>
+        </Link>
       </div>
     </>
   )
