@@ -1,8 +1,7 @@
-import { React, useState } from 'react'
+import React from 'react'
+
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { Link } from 'react-router-dom'
-import { BiShow, BiHide } from 'react-icons/bi'
 
 const initialValues = {
   firstname: '',
@@ -13,17 +12,7 @@ const initialValues = {
   cpassword: '',
 }
 
-function Register() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [showCPassword, setShowCPassword] = useState(false)
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword)
-  }
-
-  const toggleCPasswordVisibility = () => {
-    setShowCPassword(!showCPassword)
-  }
+function Profile() {
   const registerSchema = Yup.object({
     email: Yup.string()
       .email('Invalid email address')
@@ -31,9 +20,7 @@ function Register() {
     firstname: Yup.string().required('Please enter first name'),
     lastname: Yup.string().required('Last name cannot be left blank'),
     password: Yup.string().required('Please enter password'),
-    cpassword: Yup.string()
-      .oneOf([Yup.ref('password'), null], 'Passwords must match')
-      .required('Confirm Password is required'),
+    cpassword: Yup.string().required('passwords do not match'),
     phone: Yup.string().required('Please enter phone number'),
   })
 
@@ -54,20 +41,25 @@ function Register() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex justify-center items-center h-screen bg-[#247158] ">
-        <div className="flex flex-row bg-white w-[65%] rounded-lg p-1">
-          <div className="w-[50%]">
-            <img
-              className="w-[100%] "
-              src="./asset/register.jpg"
-              alt="Registration"
-            />
-          </div>
-
-          <div className="flex flex-col w-[50%] p-5 justify-center">
-            <h1 className="text-4xl text-[#247158] text-center mb-5">
-              Create Account
+      <div className="flex w-[70%] justify-start ">
+        <div className="flex flex-row w-full rounded-lg p-1">
+          <div className="flex flex-col w-[100%] justify-center">
+            <h1 className="text-4xl text-[#fff] font-bold mb-5">
+              Personal Information
             </h1>
+            <div className="flex w-[100%]  mb-2">
+              <img
+                className="w-32 h-32 border-2 rounded-full bg-[#000]"
+                src="./asset/2.jpg"
+                alt="profile"
+              />
+              <div className="text-white">
+                <p className="flex ml-2 mt-10 mr-10 ">Fatou Bintou</p>
+                <p className=" ml-2 font-bold cursor-pointer hover:underline ">
+                  Change
+                </p>
+              </div>
+            </div>
             <div className=" flex flex-col text-left">
               <input
                 type="text"
@@ -110,6 +102,34 @@ function Register() {
                 <small className="text-red-500">{errors.email}</small>
               ) : null}
             </div>
+            <div className=" flex flex-col text-left">
+              <input
+                type="password"
+                placeholder="enter password"
+                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
+                name="password"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.password}
+              />
+              {touched.password && errors.password ? (
+                <small className="text-red-500">{errors.password}</small>
+              ) : null}
+            </div>
+            <div className=" flex flex-col text-left">
+              <input
+                type="password"
+                placeholder="confirm your password"
+                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
+                name="cpassword"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.cpassword}
+              />
+              {touched.cpassword && errors.cpassword ? (
+                <small className="text-red-500">{errors.cpassword}</small>
+              ) : null}
+            </div>
             <div className=" flex flex-col text-left ">
               <input
                 type="text"
@@ -124,73 +144,13 @@ function Register() {
                 <small className="text-red-500">{errors.phone}</small>
               ) : null}
             </div>
-            <div className=" flex flex-col text-left relative">
-              <input
-                type={showPassword ? 'text' : 'password'}
-                placeholder="enter password"
-                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="password"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.password}
-              />
-              {showPassword ? (
-                <BiShow
-                  onClick={togglePasswordVisibility}
-                  className="absolute top-2 right-2 text-xl"
-                />
-              ) : (
-                <BiHide
-                  onClick={togglePasswordVisibility}
-                  className="absolute top-2 right-2 text-xl"
-                />
-              )}
-
-              {touched.password && errors.password ? (
-                <small className="text-red-500">{errors.password}</small>
-              ) : null}
-            </div>
-            <div className=" flex flex-col text-left relative">
-              <input
-                type={showCPassword ? 'text' : 'password'}
-                placeholder="confirm your password"
-                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="cpassword"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.cpassword}
-              />
-
-              {showCPassword ? (
-                <BiShow
-                  onClick={toggleCPasswordVisibility}
-                  className="absolute top-2 right-2 text-xl"
-                />
-              ) : (
-                <BiHide
-                  onClick={toggleCPasswordVisibility}
-                  className="absolute top-2 right-2 text-xl"
-                />
-              )}
-
-              {touched.cpassword && errors.cpassword ? (
-                <small className="text-red-500">{errors.cpassword}</small>
-              ) : null}
-            </div>
-
             <div>
               <button
                 type="submit"
-                className="text-white rounded-md mt-3 bg-[#247158] font-bold w-full p-2"
+                className="text-[#247158] rounded-md mt-3 bg-[#fff] font-bold w-full p-2"
               >
-                Register
+                Save
               </button>
-              <p className="text-gray-500 ">
-                Already have an account?{' '}
-                <Link to={'/login'} className="text-[#2e8b36]">
-                  Login here
-                </Link>
-              </p>
             </div>
           </div>
         </div>
@@ -199,4 +159,4 @@ function Register() {
   )
 }
 
-export default Register
+export default Profile

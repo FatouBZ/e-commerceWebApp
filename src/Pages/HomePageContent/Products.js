@@ -1,7 +1,7 @@
-import React from "react";
-import CategoryCard from "./categoryCard";
-import ProductCard from "../../components/productCard";
-import OrdersTable from "../HomePageContent/Store/orders";
+import React from 'react'
+import CategoryCard from './categoryCard'
+import ProductCard from '../../components/productCard'
+import OrdersTable from '../HomePageContent/Store/orders'
 
 function Products() {
   return (
@@ -25,7 +25,7 @@ function Products() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Products;
+export default Products

@@ -6,6 +6,7 @@ import ProductDetails from './Pages/HomePageContent/ProductsDetails'
 import Dashboard from './Pages/HomePageContent/Store/dashboard'
 import AddProduct from './Pages/HomePageContent/Store/products/addProduct-form'
 import OrdersTable from './Pages/HomePageContent/Store/orders'
+import Profile from './components/Profile'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="add-product" element={<AddProduct />} />
           <Route path="store-orders" element={<OrdersTable />} />
         </Route>
+        <Route path="/profile" element={<Profile />}></Route>
       </Routes>
     </BrowserRouter>
   )

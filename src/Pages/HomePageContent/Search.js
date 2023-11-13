@@ -1,5 +1,6 @@
-import React from "react";
-import { FaSearch } from "react-icons/fa";
+import React from 'react'
+import { FaSearch } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function Search() {
   return (
@@ -20,17 +21,19 @@ function Search() {
           </div>
         </form>
 
-        <div className="flex ">
-          <img
-            className="w-10 h-10  rounded-full bg-[#000]"
-            src=""
-            alt="profile"
-          />
-          <p className="flex ml-2 mt-2 mr-10">Fatou Bintou</p>
-        </div>
+        <Link to="/profileInformation">
+          <div className="flex ">
+            <img
+              className="w-10 h-10  rounded-full bg-[#000]"
+              src=""
+              alt="profile"
+            />
+            <p className="flex ml-2 mt-2 mr-10">Fatou Bintou</p>
+          </div>
+        </Link>
       </div>
     </>
-  );
+  )
 }
 
-export default Search;
+export default Search
