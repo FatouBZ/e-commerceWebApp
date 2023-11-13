@@ -4,17 +4,23 @@ import { RiAccountCircleLine, RiCoupon4Line } from 'react-icons/ri'
 import { HiOutlineClipboardList, HiOutlineLocationMarker } from 'react-icons/hi'
 import { ImCreditCard } from 'react-icons/im'
 import { AiOutlineHeart } from 'react-icons/ai'
+<<<<<<< HEAD
 import { BiLogoBootstrap } from 'react-icons/bi'
 
+=======
+>>>>>>> 748f99f (added profile and updated register ans login screen)
 import { Link } from 'react-router-dom'
 function ProfileMenuItems() {
   return (
     <>
+<<<<<<< HEAD
       <Link to={'/'}>
         <div className="items-center">
           <BiLogoBootstrap className="text-white text-6xl " />
         </div>
       </Link>
+=======
+>>>>>>> 748f99f (added profile and updated register ans login screen)
       <Link
         to="/MyAccount"
         className="flex items-center hover:bg-[#6AB29B] focus:font-bold
