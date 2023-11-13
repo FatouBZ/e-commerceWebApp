@@ -1,6 +1,7 @@
-import React from "react";
-import CategoryCard from "./categoryCard";
-import ProductCard from "../../components/productCard";
+import React from 'react'
+import CategoryCard from './categoryCard'
+import ProductCard from '../../components/productCard'
+import { Link } from 'react-router-dom'
 
 function Products() {
   return (
@@ -18,12 +19,14 @@ function Products() {
         <div className=" text-lg text-[#247158] mb-3">
           <h1>Category chosen name</h1>
         </div>
-        <div className="flex flex-wrap justify-start gap-3">
-          <ProductCard />
-        </div>
+        <Link to="/product-details">
+          <div className="flex flex-wrap justify-start gap-3">
+            <ProductCard />
+          </div>
+        </Link>
       </div>
     </>
-  );
+  )
 }
 
-export default Products;
+export default Products
