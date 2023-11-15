@@ -13,13 +13,13 @@ export default function ProductCard() {
       <div className="flex flex-col text-left p-2 ">
         <p className="font-bold">Product Name</p>
         <div className="flex">
-          <p className="text-[#247158] font-bold text-lg mr-20 ">$20</p>
+          <p className="text-[#247158] text-lg mr-20 ">$20</p>
           <p>Rating</p>
         </div>
       </div>
       <div className="w-full p-2">
-        <button className=" w-full bg-[#247158] p-1 mb-2 text-[#fff] font-bold rounded-lg">
-          add to Cart
+        <button className=" w-full bg-[#247158] p-1 mb-2 text-[#fff] rounded-lg">
+          Add to Cart
         </button>
       </div>
     </div>
