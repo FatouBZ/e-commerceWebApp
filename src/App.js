@@ -28,7 +28,6 @@ function App() {
           element={<ProfileInformation />}
         ></Route>
         <Route path="/modal" element={<MyModal />}></Route>
-        <Route path="/addProd" element={<AddProduct />} />
       </Routes>
     </BrowserRouter>
   )
