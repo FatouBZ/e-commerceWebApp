@@ -1,14 +1,14 @@
 import React from 'react'
-import orderButtons from './orderButtons'
-function Orders() {
+import couponButtons from './couponButtons'
+function Coupons() {
   return (
     <div className="flex flex-col w-[100%] justify-center">
-      <h1 className="text-4xl text-[#247158] font-bold mb-5">ORDERS</h1>
+      <h1 className="text-4xl text-[#247158] font-bold mb-5">COUPONS</h1>
       <ul className="flex justify-start text-[#247158]">
-        {orderButtons.map((orderButton) => (
-          <li key={orderButton.id}>
+        {couponButtons.map((couponButton) => (
+          <li key={couponButton.id}>
             <button className="mr-10 hover:underline focus:underline underline-offset-8 hover:decoration-2 focus:decoration-2">
-              {orderButton.name}
+              {couponButton.name}
             </button>
           </li>
         ))}
@@ -18,4 +18,4 @@ function Orders() {
   )
 }
 
-export default Orders
+export default Coupons

@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage'
 import ProductDetails from './Pages/HomePageContent/ProductsDetails'
 import Profile from './components/Profile'
 import ProfileInformation from './components/ProfileInformation'
+import MyModal from './components/modal'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           path="/profileInformation"
           element={<ProfileInformation />}
         ></Route>
+        <Route path="/modal" element={<MyModal />}></Route>
       </Routes>
     </BrowserRouter>
   )
