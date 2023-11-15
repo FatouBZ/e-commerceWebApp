@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryCard from "./categoryCard";
 import ProductCard from "../../components/productCard";
+import OrdersTable from "../HomePageContent/Store/orders";
 
 function Products() {
   return (
@@ -19,6 +20,7 @@ function Products() {
           <h1>Category chosen name</h1>
         </div>
         <div className="flex flex-wrap gap-3 px-5 justify-between">
+          <OrdersTable />
           <ProductCard />
         </div>
       </div>
