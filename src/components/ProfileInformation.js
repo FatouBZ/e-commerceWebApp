@@ -1,5 +1,7 @@
 import React from 'react'
 import ProfileMenuItems from '../Pages/HomePageContent/ProfileMenuItems'
+import Orders from './Orders'
+import Coupons from './Coupons'
 import AddressBook from './addressBook'
 
 function ProfileInformation() {
