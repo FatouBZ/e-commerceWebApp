@@ -23,7 +23,6 @@ function App() {
           <Route path="store-orders" element={<OrdersTable />} />
         </Route>
         <Route path="/profile" element={<Profile />}></Route>
-        <Route path="/MyAccount" element={<Profile />}></Route>
         <Route
           path="/profileInformation"
           element={<ProfileInformation />}
