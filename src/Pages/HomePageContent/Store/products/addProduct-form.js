@@ -40,7 +40,7 @@ export default function AddProduct() {
       <form onSubmit={handleSubmit}>
         <div className="outline outline-1 outline-gray-200 rounded-md p-5 m-5 bg-white shadow-sm">
           <div className="flex items-center justify-center">
-            <h3 className="p-2 m-2 text-center text-[#247158] text-2xl">
+            <h3 className="p-2 m-2 text-left text-[#247158] text-2xl">
               Add Product
             </h3>
           </div>
