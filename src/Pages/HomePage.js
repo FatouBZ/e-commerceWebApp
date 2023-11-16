@@ -1,8 +1,10 @@
-import React from "react";
-import MenuItem from "./HomePageContent/MenuItem";
-import Cart from "./HomePageContent/Cart";
-import Search from "../components/Search";
-import Products from "./HomePageContent/Products";
+import React from 'react'
+import MenuItem from './HomePageContent/MenuItem'
+import Cart from './HomePageContent/Cart'
+import Search from './HomePageContent/Search'
+import Products from './HomePageContent/Products'
+import ProductsDetails from './HomePageContent/ProductsDetails'
+import Search from './HomePageContent/Search'
 
 function HomePage() {
   return (
@@ -18,7 +20,7 @@ function HomePage() {
         <Cart />
       </div>
     </div>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage
