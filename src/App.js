@@ -7,6 +7,7 @@ import Profile from './components/Profile'
 import ProfileInformation from './components/ProfileInformation'
 import MyModal from './components/modal'
 import AddProduct from './Pages/HomePageContent/Store/addProduct-form'
+import Dashboard from './Pages/HomePageContent/Store/dashboard'
 
 function App() {
   return (
