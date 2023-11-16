@@ -481,7 +481,7 @@ const OrdersTable = () => {
               aria-label="Pagination"
             >
               <li
-                class={` prev-btn flex items-center justify-center w-[36px] rounded-[6px] h-[36px] border-[1px] border-solid border-[#E4E4EB] disabled] ${
+                className={` prev-btn flex items-center justify-center w-[36px] rounded-[6px] h-[36px] border-[1px] border-solid border-[#E4E4EB] disabled] ${
                   currentPage === 0
                     ? "bg-[#cccccc] pointer-events-none"
                     : " cursor-pointer"
@@ -496,7 +496,7 @@ const OrdersTable = () => {
               </li>
               {customPagination?.map((data, index) => (
                 <li
-                  className={`flex items-center justify-center w-[36px] rounded-[6px] h-[34px] border-[1px] border-solid border-[2px] bg-[#FFFFFF] cursor-pointer ${
+                  className={`flex items-center justify-center w-[36px] rounded-[6px] h-[34px] border-solid border-[2px] bg-[#FFFFFF] cursor-pointer ${
                     currentPage === index
                       ? "text-blue-600  border-sky-500"
                       : "border-[#E4E4EB] "
@@ -508,7 +508,7 @@ const OrdersTable = () => {
                 </li>
               ))}
               <li
-                class={`flex items-center justify-center w-[36px] rounded-[6px] h-[36px] border-[1px] border-solid border-[#E4E4EB] ${
+                className={`flex items-center justify-center w-[36px] rounded-[6px] h-[36px] border-[1px] border-solid border-[#E4E4EB] ${
                   currentPage === totalPage - 1
                     ? "bg-[#cccccc] pointer-events-none"
                     : " cursor-pointer"
