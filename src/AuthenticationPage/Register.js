@@ -15,6 +15,16 @@ const initialValues = {
 }
 
 function Register() {
+  const [showPassword, setShowPassword] = useState(false)
+  const [showCPassword, setShowCPassword] = useState(false)
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword)
+  }
+
+  const toggleCPasswordVisibility = () => {
+    setShowCPassword(!showCPassword)
+  }
   const registerSchema = Yup.object({
     email: Yup.string()
       .email('Invalid email address')
@@ -22,7 +32,9 @@ function Register() {
     firstname: Yup.string().required('Please enter first name'),
     lastname: Yup.string().required('Last name cannot be left blank'),
     password: Yup.string().required('Please enter password'),
-    cpassword: Yup.string().required('passwords do not match'),
+    cpassword: Yup.string()
+      .oneOf([Yup.ref('password'), null], 'Passwords must match')
+      .required('Confirm Password is required'),
     phone: Yup.string().required('Please enter phone number'),
   })
 
@@ -92,7 +104,7 @@ function Register() {
                 type="text"
                 placeholder="enter last name"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="firstname"
+                name="lastname"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.lastname}
@@ -106,41 +118,13 @@ function Register() {
                 type="email"
                 placeholder="enter email"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="firstname"
+                name="email"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.email}
               />
               {touched.email && errors.email ? (
                 <small className="text-red-500">{errors.email}</small>
-              ) : null}
-            </div>
-            <div className=" flex flex-col text-left">
-              <input
-                type="text"
-                placeholder="enter password"
-                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="password"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.password}
-              />
-              {touched.password && errors.password ? (
-                <small className="text-red-500">{errors.password}</small>
-              ) : null}
-            </div>
-            <div className=" flex flex-col text-left">
-              <input
-                type="password"
-                placeholder="confirm your password"
-                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="cpassword"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.cpassword}
-              />
-              {touched.cpassword && errors.cpassword ? (
-                <small className="text-red-500">{errors.cpassword}</small>
               ) : null}
             </div>
             <div className=" flex flex-col text-left ">
@@ -157,6 +141,60 @@ function Register() {
                 <small className="text-red-500">{errors.phone}</small>
               ) : null}
             </div>
+            <div className=" flex flex-col text-left relative">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="enter password"
+                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
+                name="password"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.password}
+              />
+              {showPassword ? (
+                <BiShow
+                  onClick={togglePasswordVisibility}
+                  className="absolute top-2 right-2 text-xl"
+                />
+              ) : (
+                <BiHide
+                  onClick={togglePasswordVisibility}
+                  className="absolute top-2 right-2 text-xl"
+                />
+              )}
+
+              {touched.password && errors.password ? (
+                <small className="text-red-500">{errors.password}</small>
+              ) : null}
+            </div>
+            <div className=" flex flex-col text-left relative">
+              <input
+                type={showCPassword ? 'text' : 'password'}
+                placeholder="confirm your password"
+                className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
+                name="cpassword"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.cpassword}
+              />
+
+              {showCPassword ? (
+                <BiShow
+                  onClick={toggleCPasswordVisibility}
+                  className="absolute top-2 right-2 text-xl"
+                />
+              ) : (
+                <BiHide
+                  onClick={toggleCPasswordVisibility}
+                  className="absolute top-2 right-2 text-xl"
+                />
+              )}
+
+              {touched.cpassword && errors.cpassword ? (
+                <small className="text-red-500">{errors.cpassword}</small>
+              ) : null}
+            </div>
+
             <div>
               <button
                 type="submit"
@@ -164,7 +202,7 @@ function Register() {
               >
                 Register
               </button>
-              <p className="text-gray-500  mt-2 ">
+              <p className="text-gray-500 ">
                 Already have an account?{' '}
                 <Link to={'/login'} className="text-[#2e8b36]">
                   Login here
