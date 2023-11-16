@@ -4,6 +4,7 @@ import Cart from './HomePageContent/Cart'
 import Search from './HomePageContent/Search'
 import Products from './HomePageContent/Products'
 import ProductsDetails from './HomePageContent/ProductsDetails'
+import Search from './HomePageContent/Search'
 
 function HomePage() {
   return (

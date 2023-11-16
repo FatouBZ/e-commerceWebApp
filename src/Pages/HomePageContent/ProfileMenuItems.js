@@ -6,6 +6,7 @@ import { ImCreditCard } from 'react-icons/im'
 import { AiOutlineHeart } from 'react-icons/ai'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { BiLogoBootstrap } from 'react-icons/bi'
 
 =======
@@ -14,24 +15,34 @@ import { BiLogoBootstrap } from 'react-icons/bi'
 import { BiLogoBootstrap } from 'react-icons/bi'
 
 >>>>>>> 3221bee (added addressBook, coupns, orders, json file)
+=======
+import { BiLogoBootstrap } from 'react-icons/bi'
+
+>>>>>>> origin/Fatou
 import { Link } from 'react-router-dom'
 function ProfileMenuItems() {
   return (
     <>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3221bee (added addressBook, coupns, orders, json file)
+=======
+>>>>>>> origin/Fatou
       <Link to={'/'}>
         <div className="items-center">
           <BiLogoBootstrap className="text-white text-6xl " />
         </div>
       </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 748f99f (added profile and updated register ans login screen)
 =======
 >>>>>>> 3221bee (added addressBook, coupns, orders, json file)
+=======
+>>>>>>> origin/Fatou
       <Link
         to="/MyAccount"
         className="flex items-center hover:bg-[#6AB29B] focus:font-bold

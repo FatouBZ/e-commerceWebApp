@@ -87,7 +87,7 @@ function Register() {
                 type="text"
                 placeholder="enter last name"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="firstname"
+                name="lastname"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.lastname}
@@ -101,7 +101,7 @@ function Register() {
                 type="email"
                 placeholder="enter email"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
-                name="firstname"
+                name="email"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.email}
