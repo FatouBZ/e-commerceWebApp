@@ -1,18 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import { RiAccountCircleLine, RiCoupon4Line } from "react-icons/ri";
-import {
-  HiOutlineClipboardList,
-  HiOutlineLocationMarker,
-} from "react-icons/hi";
-import { ImCreditCard } from "react-icons/im";
-import { AiOutlineHeart } from "react-icons/ai";
-import { BiLogoBootstrap } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { RiAccountCircleLine, RiCoupon4Line } from 'react-icons/ri'
+import { HiOutlineClipboardList, HiOutlineLocationMarker } from 'react-icons/hi'
+import { ImCreditCard } from 'react-icons/im'
+import { AiOutlineHeart } from 'react-icons/ai'
+import { BiLogoBootstrap } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 function ProfileMenuItems() {
   return (
     <>
-      <Link to={"/"}>
+      <Link to={'/'}>
         <div className="items-center">
           <BiLogoBootstrap className="text-white text-6xl " />
         </div>
@@ -46,7 +43,7 @@ function ProfileMenuItems() {
         <p>My Wish List</p>
       </button>
     </>
-  );
+  )
 }
 
-export default ProfileMenuItems;
+export default ProfileMenuItems
