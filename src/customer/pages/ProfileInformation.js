@@ -1,6 +1,6 @@
-import React from 'react'
-import ProfileMenuItems from '../Pages/HomePageContent/ProfileMenuItems'
-import AddressBook from './addressBook'
+import React from "react";
+import ProfileMenuItems from "../components/ProfileMenuItems";
+import AddressBook from "../components/addressBook";
 
 function ProfileInformation() {
   return (
@@ -12,7 +12,7 @@ function ProfileInformation() {
         <AddressBook />
       </div>
     </div>
-  )
+  );
 }
 
-export default ProfileInformation
+export default ProfileInformation;

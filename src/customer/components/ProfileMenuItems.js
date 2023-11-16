@@ -1,48 +1,22 @@
-import React from 'react'
+import React from "react";
 
-import { RiAccountCircleLine, RiCoupon4Line } from 'react-icons/ri'
-import { HiOutlineClipboardList, HiOutlineLocationMarker } from 'react-icons/hi'
-import { ImCreditCard } from 'react-icons/im'
-import { AiOutlineHeart } from 'react-icons/ai'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { BiLogoBootstrap } from 'react-icons/bi'
-
-=======
->>>>>>> 748f99f (added profile and updated register ans login screen)
-=======
-import { BiLogoBootstrap } from 'react-icons/bi'
-
->>>>>>> 3221bee (added addressBook, coupns, orders, json file)
-=======
-import { BiLogoBootstrap } from 'react-icons/bi'
-
->>>>>>> origin/Fatou
-import { Link } from 'react-router-dom'
+import { RiAccountCircleLine, RiCoupon4Line } from "react-icons/ri";
+import {
+  HiOutlineClipboardList,
+  HiOutlineLocationMarker,
+} from "react-icons/hi";
+import { ImCreditCard } from "react-icons/im";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BiLogoBootstrap } from "react-icons/bi";
+import { Link } from "react-router-dom";
 function ProfileMenuItems() {
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3221bee (added addressBook, coupns, orders, json file)
-=======
->>>>>>> origin/Fatou
-      <Link to={'/'}>
+      <Link to={"/"}>
         <div className="items-center">
           <BiLogoBootstrap className="text-white text-6xl " />
         </div>
       </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 748f99f (added profile and updated register ans login screen)
-=======
->>>>>>> 3221bee (added addressBook, coupns, orders, json file)
-=======
->>>>>>> origin/Fatou
       <Link
         to="/MyAccount"
         className="flex items-center hover:bg-[#6AB29B] focus:font-bold
@@ -72,7 +46,7 @@ function ProfileMenuItems() {
         <p>My Wish List</p>
       </button>
     </>
-  )
+  );
 }
 
-export default ProfileMenuItems
+export default ProfileMenuItems;

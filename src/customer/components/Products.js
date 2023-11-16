@@ -1,8 +1,8 @@
-import React from 'react'
-import CategoryCard from './categoryCard'
-import ProductCard from '../../components/productCard'
-import OrdersTable from '../HomePageContent/Store/orders'
-import { Link } from 'react-router-dom'
+import React from "react";
+import CategoryCard from "./categoryCard";
+import ProductCard from "./productCard";
+import OrdersTable from "../../store/components/orders";
+import { Link } from "react-router-dom";
 
 function Products() {
   return (
@@ -27,7 +27,7 @@ function Products() {
         </Link>
       </div>
     </>
-  )
+  );
 }
 
-export default Products
+export default Products;
