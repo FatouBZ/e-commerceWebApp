@@ -19,7 +19,7 @@ import {
   InboxIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
-import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { BiLogoBootstrap } from "react-icons/bi";
 
