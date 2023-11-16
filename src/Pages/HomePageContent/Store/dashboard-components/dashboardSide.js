@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   Card,
   Typography,
@@ -10,7 +10,7 @@ import {
   Accordion,
   AccordionHeader,
   AccordionBody,
-} from "@material-tailwind/react";
+} from '@material-tailwind/react'
 import {
   PresentationChartBarIcon,
   ShoppingBagIcon,
@@ -18,21 +18,21 @@ import {
   Cog6ToothIcon,
   InboxIcon,
   PowerIcon,
-} from "@heroicons/react/24/solid";
-import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
-import { BiLogoBootstrap } from "react-icons/bi";
+} from '@heroicons/react/24/solid'
+import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
+import { BiLogoBootstrap } from 'react-icons/bi'
 
 export default function Dashboardside() {
-  const [open, setOpen] = React.useState(0);
+  const [open, setOpen] = React.useState(0)
 
   const handleOpen = (value) => {
-    setOpen(open === value ? 0 : value);
-  };
+    setOpen(open === value ? 0 : value)
+  }
 
   return (
     <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 bg-transparent text-white">
-      <Link to={"/dashboard"}>
+      <Link to={'/dashboard'}>
         <div className="mb-2 p-4">
           <Typography variant="h5" color="blue-gray">
             <BiLogoBootstrap className="text-6xl text-white" />
@@ -40,7 +40,7 @@ export default function Dashboardside() {
         </div>
       </Link>
       <List>
-        <Link to={"/dashboard"}>
+        <Link to={'/dashboard'}>
           <ListItem className="p-3" selected={open === 1}>
             <ListItemPrefix>
               <PresentationChartBarIcon className="h-5 w-5" />
@@ -56,7 +56,7 @@ export default function Dashboardside() {
             <ChevronDownIcon
               strokeWidth={2.5}
               className={`mx-auto h-4 w-4 transition-transform ${
-                open === 2 ? "rotate-180" : ""
+                open === 2 ? 'rotate-180' : ''
               }`}
             />
           }
@@ -76,13 +76,13 @@ export default function Dashboardside() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="px-7 py-0">
-              <Link to={"add-product"}>
+              <Link to={'add-product'}>
                 <ListItem>
                   <ListItemPrefix></ListItemPrefix>
                   Add Product
                 </ListItem>
               </Link>
-              <Link to={"store-orders"}>
+              <Link to={'store-orders'}>
                 <ListItem>
                   <ListItemPrefix></ListItemPrefix>
                   View Product
@@ -126,5 +126,5 @@ export default function Dashboardside() {
         </ListItem>
       </List>
     </Card>
-  );
+  )
 }
