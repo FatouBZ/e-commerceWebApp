@@ -19,13 +19,9 @@ function Products() {
       <div className="bg-white py-3 shadow-sm rounded-md overflow-x-hidden scrollbar-hide overflow-y-auto ">
         <div className=" text-lg text-[#247158] mb-3 px-5">
           <h1>Category chosen name</h1>
-        </div>
-        <div className="flex flex-wrap gap-3 px-5 justify-between">
-          <OrdersTable />
-          <ProductCard />
-        </div>
+        </div>{' '}
         <Link to="/product-details">
-          <div className="flex flex-wrap justify-start gap-3">
+          <div className="flex flex-wrap gap-3 px-5 justify-between">
             <ProductCard />
           </div>
         </Link>
