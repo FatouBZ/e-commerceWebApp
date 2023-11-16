@@ -1,29 +1,42 @@
-import { useFormik } from "formik";
-import React from "react";
-import { Link } from "react-router-dom";
-import * as Yup from "yup";
+import { useFormik } from 'formik'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import * as Yup from 'yup'
+import { BiShow, BiHide } from 'react-icons/bi'
 
 const initialValues = {
-  email: "",
-  password: "",
-};
+  email: '',
+  password: '',
+}
 
 function Login() {
+  const [showPassword, setShowPassword] = useState(false)
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword)
+  }
+
   const loginSchema = Yup.object().shape({
     email: Yup.string()
-      .email("Invalid email address")
-      .required("Please enter email address"),
-    password: Yup.string().required("Please enter password"),
-  });
+      .email('Invalid email address')
+      .required('Please enter email address'),
+    password: Yup.string().required('Please enter password'),
+  })
 
-  const { values, handleSubmit, handleBlur, handleChange, errors, touched } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: loginSchema,
-      onSubmit: (values) => {
-        console.log(values);
-      },
-    });
+  const {
+    values,
+    handleSubmit,
+    handleBlur,
+    handleChange,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: loginSchema,
+    onSubmit: (values) => {
+      console.log(values)
+    },
+  })
   return (
     <form onSubmit={handleSubmit}>
       <div className="h-screen flex justify-center items-center">
@@ -54,18 +67,31 @@ function Login() {
                   {touched.email && errors.email ? (
                     <small className="text-red-500">{errors.email}</small>
                   ) : null}
-                  <input
-                    type="password"
-                    placeholder="enter password"
-                    className="block rounded w-full p-2 mb-2 outline outline-1 outline-gray-200"
-                    name="password"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    value={values.password}
-                  />
-                  {touched.password && errors.password ? (
-                    <small className="text-red-500">{errors.password}</small>
-                  ) : null}
+                  <div className=" flex flex-col text-left relative">
+                    <input
+                      type={showPassword ? 'text' : 'password'}
+                      placeholder="enter password"
+                      className="block rounded w-full p-2 mb-2 outline outline-1 outline-gray-200"
+                      name="password"
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                      value={values.password}
+                    />
+                    {showPassword ? (
+                      <BiShow
+                        onClick={togglePasswordVisibility}
+                        className="absolute top-2 right-2 text-xl"
+                      />
+                    ) : (
+                      <BiHide
+                        onClick={togglePasswordVisibility}
+                        className="absolute top-2 right-2 text-xl"
+                      />
+                    )}
+                    {touched.password && errors.password ? (
+                      <small className="text-red-500">{errors.password}</small>
+                    ) : null}
+                  </div>
                   <button
                     className="w-full p-2 text-white rounded-md bg-[#247158]"
                     type="submit"
@@ -75,8 +101,16 @@ function Login() {
 
                   <p className="text-gray-500">Forgot Password?</p>
                   <p className="text-gray-500">
-                    New here?{" "}
-                    <Link to={"/register"} className="text-[#2e8b36]">
+                    New here?{' '}
+                    <Link to={'/register'} className="text-[#2e8b36]">
+                      Create Account
+                    </Link>
+                  </p>
+
+                  <p className="text-gray-500">Forgot Password?</p>
+                  <p className="text-gray-500">
+                    New here?{' '}
+                    <Link to={'/register'} className="text-[#2e8b36]">
                       Create Account
                     </Link>
                   </p>
@@ -87,7 +121,7 @@ function Login() {
         </div>
       </div>
     </form>
-  );
+  )
 }
 
-export default Login;
+export default Login

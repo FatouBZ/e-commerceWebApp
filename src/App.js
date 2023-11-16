@@ -1,11 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./AuthenticationPage/login";
-import Register from "./AuthenticationPage/Register";
-import HomePage from "./Pages/HomePage";
-import ProductDetails from "./Pages/HomePageContent/ProductsDetails";
-import Dashboard from "./Pages/HomePageContent/Store/dashboard";
-import AddProduct from "./Pages/HomePageContent/Store/products/addProduct-form";
-import OrdersTable from "./Pages/HomePageContent/Store/orders";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './AuthenticationPage/login'
+import Register from './AuthenticationPage/Register'
+import HomePage from './Pages/HomePage'
+import ProductDetails from './Pages/HomePageContent/ProductsDetails'
+import Dashboard from './Pages/HomePageContent/Store/dashboard'
+import AddProduct from './Pages/HomePageContent/Store/products/addProduct-form'
+import OrdersTable from './Pages/HomePageContent/Store/orders'
+import Profile from './components/Profile'
+import ProfileInformation from './components/ProfileInformation'
+import MyModal from './components/modal'
 
 function App() {
   return (
@@ -19,9 +22,17 @@ function App() {
           <Route path="add-product" element={<AddProduct />} />
           <Route path="store-orders" element={<OrdersTable />} />
         </Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/MyAccount" element={<Profile />}></Route>
+        <Route
+          path="/profileInformation"
+          element={<ProfileInformation />}
+        ></Route>
+        <Route path="/modal" element={<MyModal />}></Route>
+        <Route path="/addProd" element={<AddProduct />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
