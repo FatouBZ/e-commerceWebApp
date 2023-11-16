@@ -6,6 +6,7 @@ import ProductDetails from './Pages/HomePageContent/ProductsDetails'
 import Profile from './components/Profile'
 import ProfileInformation from './components/ProfileInformation'
 import MyModal from './components/modal'
+import AddProduct from './Pages/HomePageContent/Store/products/addProduct-form'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           element={<ProfileInformation />}
         ></Route>
         <Route path="/modal" element={<MyModal />}></Route>
+        <Route path="/addProd" element={<AddProduct />} />
       </Routes>
     </BrowserRouter>
   )
