@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './AuthenticationPage/login'
-import Register from './AuthenticationPage/Register'
-import HomePage from './Pages/HomePage'
-import ProductDetails from './Pages/HomePageContent/ProductsDetails'
-import Dashboard from './Pages/HomePageContent/Store/dashboard'
-import AddProduct from './Pages/HomePageContent/Store/products/addProduct-form'
-import OrdersTable from './Pages/HomePageContent/Store/orders'
-import Profile from './components/Profile'
-import ProfileInformation from './components/ProfileInformation'
-import MyModal from './components/modal'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./customer/pages/login";
+import Register from "./customer/pages/Register";
+import HomePage from "./customer/pages/HomePage";
+import ProductDetails from "./customer/components/ProductsDetails";
+import Dashboard from "./store/pages/dashboard";
+import AddProduct from "./store/components/addProduct-form";
+import OrdersTable from "./store/components/orders";
+import Profile from "./customer/components/Profile";
+import ProfileInformation from "./customer/pages/ProfileInformation";
+import MyModal from "./customer/components/modal";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         <Route path="/addProd" element={<AddProduct />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
