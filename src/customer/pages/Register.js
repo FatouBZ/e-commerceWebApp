@@ -164,7 +164,7 @@ function Register() {
               {showCPassword ? (
                 <BiShow
                   onClick={toggleCPasswordVisibility}
-                  className="absolute top-2 right-2 text-xl"
+                  className="absolute top-2 right-2 text-xl "
                 />
               ) : (
                 <BiHide

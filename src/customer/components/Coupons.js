@@ -1,5 +1,5 @@
 import React from 'react'
-import couponButtons from './couponButtons'
+import couponButtons from '../data/couponButtons.json'
 function Coupons() {
   return (
     <div className="flex flex-col w-[100%] justify-center">

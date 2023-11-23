@@ -1,5 +1,5 @@
 import React from 'react'
-import orderButtons from './orderButtons'
+import orderButtons from '../data/orderButtons.json'
 function Orders() {
   return (
     <div className="flex flex-col w-[100%] justify-center">

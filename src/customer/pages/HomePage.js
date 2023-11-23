@@ -1,18 +1,8 @@
-<<<<<<< HEAD:src/customer/pages/HomePage.js
-import React from "react";
-import MenuItem from "../components/MenuItem";
-import Cart from "../components/Cart";
-import Search from "../components/Search";
-import Products from "../components/Products";
-import ProductsDetails from "../components/ProductsDetails";
-=======
 import React from 'react'
-import MenuItem from './HomePageContent/MenuItem'
-import Cart from './HomePageContent/Cart'
-import Search from './HomePageContent/Search'
-import Products from './HomePageContent/Products'
-import ProductsDetails from './HomePageContent/ProductsDetails'
->>>>>>> 3bb5528 (update):src/Pages/HomePage.js
+import MenuItem from '../components/MenuItem'
+import Cart from '../components/Cart'
+import Search from '../components/Search'
+import { Outlet } from 'react-router-dom'
 
 function HomePage() {
   return (
@@ -22,13 +12,15 @@ function HomePage() {
       </div>
       <div className="flex flex-col h-screen bg-[#E5DAC4] rounded m-3 w-[75%] p-5 gap-4 max-h-[97%]">
         <Search />
-        <Products />
+        <Outlet />
+        {/* <ProductsDetails /> */}
+        {/* <Products /> */}
       </div>
       <div className="flex flex-col w-[20%] p-5 bg-[#247158] ">
         <Cart />
       </div>
     </div>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

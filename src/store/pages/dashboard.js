@@ -1,10 +1,10 @@
-import React from "react";
-import Dashboardside from "../components/dashboardSide";
-import OrdersTable from "../components/orders";
-import AddProduct from "../components/addProduct-form";
-import { Route, Routes } from "react-router-dom";
-import AdminLogin from "./adLogin";
-import DashboardCard from "../components/dashboardCard";
+import React from 'react'
+import Dashboardside from '../components/dashboardSide'
+import OrdersTable from '../components/orders'
+import AddProduct from '../components/addProduct-form'
+import { Route, Routes } from 'react-router-dom'
+import AdminLogin from './adLogin'
+import DashboardCard from '../components/dashboardCard'
 function Dashboard() {
   return (
     <div className=" flex flex-row h-screen bg-[#247158]">
@@ -20,7 +20,7 @@ function Dashboard() {
         </Routes>
       </div>
     </div>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard

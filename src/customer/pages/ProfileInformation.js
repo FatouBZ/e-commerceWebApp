@@ -1,6 +1,6 @@
-import React from "react";
-import ProfileMenuItems from "../components/ProfileMenuItems";
-import AddressBook from "../components/addressBook";
+import React from 'react'
+import ProfileMenuItems from '../components/ProfileMenuItems'
+import { Outlet } from 'react-router-dom'
 
 function ProfileInformation() {
   return (
@@ -9,10 +9,10 @@ function ProfileInformation() {
         <ProfileMenuItems />
       </div>
       <div className="w-[80%] items-center bg-[#E5DAC4] rounded p-20">
-        <AddressBook />
+        <Outlet />
       </div>
     </div>
-  );
+  )
 }
 
-export default ProfileInformation;
+export default ProfileInformation

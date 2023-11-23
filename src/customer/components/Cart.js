@@ -1,7 +1,7 @@
-import React from "react";
-import { BsCashCoin, BsCreditCard, BsThreeDotsVertical } from "react-icons/bs";
-import { BiQrScan } from "react-icons/bi";
-import { AiFillPlusSquare, AiFillMinusSquare } from "react-icons/ai";
+import React from 'react'
+import { BsCashCoin, BsCreditCard, BsThreeDotsVertical } from 'react-icons/bs'
+import { BiQrScan } from 'react-icons/bi'
+import { AiFillPlusSquare, AiFillMinusSquare } from 'react-icons/ai'
 
 function Cart() {
   return (
@@ -12,9 +12,9 @@ function Cart() {
       </div>
 
       <div className=" flex bg-[#fff]  rounded-lg text-center mb-2">
-        <div className="p-2 max-w-[35%]">
+        <div className="p-2 max-w-[30%]">
           <img
-            src="./asset/1.jpg"
+            src="../asset/1.jpg"
             alt="product name"
             className="rounded-lg w-[100%]"
           />
@@ -89,7 +89,7 @@ function Cart() {
         </button>
       </div>
     </>
-  );
+  )
 }
 
-export default Cart;
+export default Cart

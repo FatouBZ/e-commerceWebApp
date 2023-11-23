@@ -1,8 +1,6 @@
-import React from "react";
-import CategoryCard from "./categoryCard";
-import ProductCard from "./productCard";
-import OrdersTable from "../../store/components/orders";
-import { Link } from "react-router-dom";
+import React from 'react'
+import CategoryCard from './categoryCard'
+import ProductCard from './productCard'
 
 function Products() {
   return (
@@ -20,14 +18,17 @@ function Products() {
         <div className=" text-lg text-[#247158] mb-3 px-5">
           <h1>Category chosen name</h1>
         </div>
-        <Link to="/product-details">
-          <div className="flex flex-wrap gap-3 px-5 justify-between">
-            <ProductCard />
-          </div>
-        </Link>
+
+        <div className="flex flex-wrap gap-3 px-5 justify-between">
+          <ProductCard />
+        </div>
+
+        {/* <div className="flex flex-wrap gap-3 px-5 justify-between">
+          <ProductCard /> */}
+        {/* </div> */}
       </div>
     </>
-  );
+  )
 }
 
-export default Products;
+export default Products
