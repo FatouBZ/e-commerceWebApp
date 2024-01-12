@@ -1,56 +1,71 @@
-import { React, useState } from 'react'
-import { useFormik } from 'formik'
-import * as Yup from 'yup'
-import { Link } from 'react-router-dom'
-import { BiShow, BiHide } from 'react-icons/bi'
+import { React, useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { Link } from "react-router-dom";
+import { BiShow, BiHide } from "react-icons/bi";
 
 const initialValues = {
-  firstname: '',
-  lastname: '',
-  phone: '',
-  email: '',
-  password: '',
-  cpassword: '',
-}
+  firstname: "",
+  lastname: "",
+  phone: "",
+  email: "",
+  password: "",
+  cpassword: "",
+};
 
 function Register() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [showCPassword, setShowCPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
+  const [showCPassword, setShowCPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword)
-  }
+    setShowPassword(!showPassword);
+  };
 
   const toggleCPasswordVisibility = () => {
-    setShowCPassword(!showCPassword)
-  }
+    setShowCPassword(!showCPassword);
+  };
   const registerSchema = Yup.object({
     email: Yup.string()
-      .email('Invalid email address')
-      .required('Please enter email address'),
-    firstname: Yup.string().required('Please enter first name'),
-    lastname: Yup.string().required('Last name cannot be left blank'),
-    password: Yup.string().required('Please enter password'),
+      .email("Invalid email address")
+      .required("Please enter email address"),
+    firstname: Yup.string().required("Please enter first name"),
+    lastname: Yup.string().required("Last name cannot be left blank"),
+    password: Yup.string().required("Please enter password"),
     cpassword: Yup.string()
-      .oneOf([Yup.ref('password'), null], 'Passwords must match')
-      .required('Confirm Password is required'),
-    phone: Yup.string().required('Please enter phone number'),
-  })
+      .oneOf([Yup.ref("password"), null], "Passwords must match")
+      .required("Confirm Password is required"),
+    phone: Yup.string().required("Please enter phone number"),
+  });
 
-  const {
-    values,
-    handleSubmit,
-    handleBlur,
-    handleChange,
-    errors,
-    touched,
-  } = useFormik({
-    initialValues: initialValues,
-    validationSchema: registerSchema,
-    onSubmit: (values) => {
-      console.log(values)
-    },
-  })
+  const { values, handleSubmit, handleBlur, handleChange, errors, touched } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: registerSchema,
+      onSubmit: async (values) => {
+        console.log(values);
+        try {
+          const response = await fetch(
+            "https://da73-154-160-30-34.ngrok-free.app/ecommerceservices/register/",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams(values),
+            }
+          );
+
+          if (!response.ok) {
+            console.error("Error:", response.message);
+          } else {
+            const responseData = await response.json();
+            console.log("Response:", responseData);
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      },
+    });
 
   return (
     <form onSubmit={handleSubmit}>
@@ -126,7 +141,7 @@ function Register() {
             </div>
             <div className=" flex flex-col text-left relative">
               <input
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 placeholder="enter password"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
                 name="password"
@@ -152,7 +167,7 @@ function Register() {
             </div>
             <div className=" flex flex-col text-left relative">
               <input
-                type={showCPassword ? 'text' : 'password'}
+                type={showCPassword ? "text" : "password"}
                 placeholder="confirm your password"
                 className="block p-2 mb-2 rounded w-full outline outline-1 outline-gray-200"
                 name="cpassword"
@@ -186,8 +201,8 @@ function Register() {
                 Register
               </button>
               <p className="text-gray-500 ">
-                Already have an account?{' '}
-                <Link to={'/login'} className="text-[#2e8b36]">
+                Already have an account?{" "}
+                <Link to={"/login"} className="text-[#2e8b36]">
                   Login here
                 </Link>
               </p>
@@ -196,7 +211,7 @@ function Register() {
         </div>
       </div>
     </form>
-  )
+  );
 }
 
-export default Register
+export default Register;
